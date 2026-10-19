@@ -8,7 +8,7 @@ export default function Writing() {
   const sectionRef = useRef(null)
   const scrollContainerRef = useRef(null)
 
-  const DRIVE_ARCHIVE_URL = 'https://drive.google.com/drive/folders/1hlHeol90nptd6XlwWmXBaaoO4lFqvs5Y?usp=sharing'
+  const DRIVE_ARCHIVE_URL = 'https://drive.google.com/drive/folders/1Cpz_s_oKd9B40pPki9Ss-Gsa6FOIMuLL'
 
   const essays = [
     {
