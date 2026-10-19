@@ -98,13 +98,6 @@ export default function Writing() {
             <h3 className="font-display text-3xl font-normal leading-tight text-text-dark mb-6">
               {essay.title}
             </h3>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {essay.tags.map(tag => (
-                <span key={tag} className="border border-rule-paper px-3 py-1 font-mono text-[9px] text-muted-dark uppercase tracking-[0.1em]">
-                  {tag}
-                </span>
-              ))}
-            </div>
             <a href={essay.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-[11px] text-text-dark uppercase tracking-[0.15em] hover:text-gold transition-colors">
               Read Essay <span aria-hidden="true">&rarr;</span>
             </a>
@@ -148,13 +141,6 @@ export default function Writing() {
                 <h3 className="font-display text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.1] text-text-dark mb-8">
                   {essay.title}
                 </h3>
-                <div className="flex flex-wrap gap-3 mb-10">
-                  {essay.tags.map(tag => (
-                    <span key={tag} className="border border-rule-paper px-3 py-1 font-mono text-[9px] text-muted-dark uppercase tracking-[0.1em]">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
                 <a href={essay.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-[11px] text-text-dark uppercase tracking-[0.15em] hover:text-gold transition-colors">
                   Read Essay <span aria-hidden="true">&rarr;</span>
                 </a>
