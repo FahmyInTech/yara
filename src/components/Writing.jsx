@@ -64,9 +64,9 @@ export default function Writing() {
   }, [])
 
   return (
-    <>
+    <div id="writing" className="relative">
       {/* ── Mobile layout: vertical stack ── */}
-      <section id="writing" className="lg:hidden relative bg-paper border-b border-rule-paper">
+      <section className="lg:hidden relative bg-paper border-b border-rule-paper">
         {/* Metadata */}
         <div className="h-12 flex items-center justify-between px-6 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-dark border-b border-rule-paper">
           <span>/ Selected Writing</span>
@@ -116,7 +116,7 @@ export default function Writing() {
       </section>
 
       {/* ── Desktop layout: GSAP horizontal scroll ── */}
-      <section ref={sectionRef} id="writing" className="hidden lg:block relative bg-paper h-screen overflow-hidden border-b border-rule-paper">
+      <section ref={sectionRef} className="hidden lg:block relative bg-paper h-screen overflow-hidden border-b border-rule-paper">
         {/* Corner Metadata */}
         <div className="absolute inset-x-0 top-0 h-12 flex items-center justify-between px-10 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-dark pointer-events-none z-30 border-b border-rule-paper">
           <span>/ Selected Writing</span>
@@ -170,7 +170,7 @@ export default function Writing() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
