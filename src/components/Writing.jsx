@@ -12,7 +12,7 @@ export default function Writing() {
 
   const essays = [
     {
-      title: '“Ma’loul Celebrates Its Destruction”: A 40-Year-Old Film on an Ongoing Displacement (Arabic)',
+      title: '“Ma’loul Celebrates Its Destruction”: A 40-Year-Old Film on a Displacement That Never Stopped (Arabic)',
       category: 'Essay',
       date: '2026',
       desc: 'Exploring the intersections of music, architecture, and design — the frequencies that shape how we build and feel.',
