@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark ink background -->
+  <rect width="32" height="32" fill="#17161d"/>
+  <!-- Gold "Y" letterform — bold, clean, editorial -->
+  <text
+    x="16"
+    y="23"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    font-weight="700"
+    fill="#d9b96a"
+    letter-spacing="-1"
+  >Y</text>
+  <!-- Bottom gold hairline rule -->
+  <line x1="6" y1="28" x2="26" y2="28" stroke="#d9b96a" stroke-width="1.5"/>
+</svg>
