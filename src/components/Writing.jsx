@@ -12,9 +12,9 @@ export default function Writing() {
 
   const essays = [
     {
-      title: 'Decolonizing the Frame',
+      title: '“Ma’loul Celebrates Its Destruction”: A 40-Year-Old Film on an Ongoing Displacement (Arabic)',
       category: 'Essay',
-      date: '2025',
+      date: '2026',
       desc: 'Exploring the intersections of music, architecture, and design — the frequencies that shape how we build and feel.',
       tags: ['Theory', 'Architecture', 'Music'],
       link: DRIVE_ARCHIVE_URL,
@@ -22,7 +22,7 @@ export default function Writing() {
     {
       title: 'A Beginner’s Guide to Palestinian Cinema as Resistance',
       category: 'Thesis',
-      date: '2025',
+      date: '2026',
       desc: 'An exploration of Palestinian Cinema and its historical phases as a medium of resistance and cultural preservation.',
       tags: ['Cinema', 'Archive', 'Resistance'],
       link: DRIVE_ARCHIVE_URL,
@@ -30,7 +30,7 @@ export default function Writing() {
     {
       title: 'Film Analysis: Ma’loul Celebrates Its Destruction',
       category: 'Feature',
-      date: '2023',
+      date: '2026',
       desc: 'An investigation into the documentary traditions and cinematic languages that record daily life.',
       tags: ['Documentary', 'Visual Culture'],
       link: DRIVE_ARCHIVE_URL,
@@ -143,12 +143,12 @@ export default function Writing() {
 
             {/* Essay Slides */}
             {essays.map((essay, index) => (
-              <div key={index} className="w-[45vw] h-[60vh] flex flex-col justify-center shrink-0 px-20 border-l border-rule-paper">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-dark mb-6 flex justify-between">
+              <div key={index} className="w-[45vw] min-h-[60vh] flex flex-col justify-center shrink-0 px-16 lg:px-20 border-l border-rule-paper">
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-dark mb-5 flex justify-between">
                   <span>{essay.category}</span>
                   <span>{essay.date}</span>
                 </div>
-                <h3 className="font-display text-7xl font-normal leading-tight text-text-dark mb-6">
+                <h3 className="font-display text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.1] text-text-dark mb-5">
                   {essay.title}
                 </h3>
                 <p className="font-body text-lg font-light leading-relaxed text-text-dark max-w-lg mb-10">
