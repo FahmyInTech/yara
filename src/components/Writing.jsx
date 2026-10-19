@@ -95,12 +95,9 @@ export default function Writing() {
               <span>{essay.category}</span>
               <span>{essay.date}</span>
             </div>
-            <h3 className="font-display text-3xl font-normal leading-tight text-text-dark mb-4">
+            <h3 className="font-display text-3xl font-normal leading-tight text-text-dark mb-6">
               {essay.title}
             </h3>
-            <p className="font-body text-[14px] font-light leading-relaxed text-text-dark mb-6">
-              {essay.desc}
-            </p>
             <div className="flex flex-wrap gap-2 mb-6">
               {essay.tags.map(tag => (
                 <span key={tag} className="border border-rule-paper px-3 py-1 font-mono text-[9px] text-muted-dark uppercase tracking-[0.1em]">
@@ -148,13 +145,10 @@ export default function Writing() {
                   <span>{essay.category}</span>
                   <span>{essay.date}</span>
                 </div>
-                <h3 className="font-display text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.1] text-text-dark mb-5">
+                <h3 className="font-display text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.1] text-text-dark mb-8">
                   {essay.title}
                 </h3>
-                <p className="font-body text-lg font-light leading-relaxed text-text-dark max-w-lg mb-10">
-                  {essay.desc}
-                </p>
-                <div className="flex flex-wrap gap-3 mb-12">
+                <div className="flex flex-wrap gap-3 mb-10">
                   {essay.tags.map(tag => (
                     <span key={tag} className="border border-rule-paper px-3 py-1 font-mono text-[9px] text-muted-dark uppercase tracking-[0.1em]">
                       {tag}
