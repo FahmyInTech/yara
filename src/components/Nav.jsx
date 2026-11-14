@@ -34,7 +34,7 @@ export default function Nav() {
       {/* Top-left: Brand */}
       <div className="fixed top-5 left-[calc(32px+1.25rem)] lg:left-[calc(64px+2rem)] z-50 pointer-events-auto">
         <a href="#" className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold hover:text-text transition-colors duration-200">
-          Yara Abdelaziz.
+          Yara Abdelaziz
         </a>
       </div>
 

@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Massive Name - Using sans-serif (font-body) for brutalist impact */}
           <h1 className="animate-entrance-delay-1 font-body text-[clamp(3rem,12vw,6.5rem)] lg:text-[9.5vw] font-bold leading-[0.85] tracking-tighter text-text uppercase">
             Yara
-            <span className="block mt-2 lg:mt-5 text-gold tracking-tight">Abdelaziz.</span>
+            <span className="block mt-2 lg:mt-5 text-gold tracking-tight">Abdelaziz</span>
           </h1>
 
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 mt-12 lg:mt-16">
