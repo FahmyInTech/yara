@@ -7,6 +7,7 @@ export default function CustomCursor() {
   useEffect(() => {
     const cursor = cursorRef.current
     if (!cursor) return
+    if (!window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) return
 
     // GSAP quickTo for highly performant mouse following
     const xTo = gsap.quickTo(cursor, 'x', { duration: 0.15, ease: 'power3' })

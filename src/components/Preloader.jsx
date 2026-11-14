@@ -10,10 +10,18 @@ export default function Preloader() {
     // Lock scroll
     document.body.style.overflow = 'hidden'
 
+    const finishPreloader = () => {
+      document.body.style.overflow = ''
+      setIsFinished(true)
+    }
+
+    // Safety fallback so iOS Low Power Mode rAF throttling cannot trap the user
+    const fallbackTimer = setTimeout(finishPreloader, 3000)
+
     const tl = gsap.timeline({
       onComplete: () => {
-        document.body.style.overflow = ''
-        setIsFinished(true)
+        clearTimeout(fallbackTimer)
+        finishPreloader()
       }
     })
 
@@ -49,6 +57,8 @@ export default function Preloader() {
     })
 
     return () => {
+      clearTimeout(fallbackTimer)
+      tl.kill()
       document.body.style.overflow = ''
     }
   }, [])

@@ -7,11 +7,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function SmoothScroll({ children }) {
   useEffect(() => {
-    // Initialize Lenis
+    const isDesktop = window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches
+    if (!isDesktop) return
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical', 
+      direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
       mouseMultiplier: 1,
@@ -20,20 +22,18 @@ export default function SmoothScroll({ children }) {
       infinite: false,
     })
 
-    // Integrate with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
+    const onTick = (time) => {
       lenis.raf(time * 1000)
-    })
+    }
 
+    gsap.ticker.add(onTick)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
+      gsap.ticker.remove(onTick)
       lenis.destroy()
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000)
-      })
     }
   }, [])
 

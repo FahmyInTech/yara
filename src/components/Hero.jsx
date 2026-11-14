@@ -1,4 +1,4 @@
-const HERO_IMAGE_URL = 'https://res.cloudinary.com/dgqequjgk/image/upload/v1794690613/Hero_img_bfw9ux.png'
+const HERO_IMAGE_URL = 'https://res.cloudinary.com/dgqequjgk/image/upload/f_auto,q_auto/v1794690613/Hero_img_bfw9ux.png'
 
 export default function Hero() {
   return (
@@ -45,6 +45,7 @@ export default function Hero() {
             <img
               src={HERO_IMAGE_URL}
               alt="Yara Abdelaziz"
+              decoding="async"
               className="h-full w-full object-cover object-[center_15%]"
             />
           </div>
@@ -61,6 +62,7 @@ export default function Hero() {
           <img
             src={HERO_IMAGE_URL}
             alt="Yara Abdelaziz"
+            decoding="async"
             className="h-full w-full object-cover object-top"
           />
         </div>

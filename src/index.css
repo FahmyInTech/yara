@@ -36,6 +36,8 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-ink);
   color: var(--color-text);
+  min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -152,7 +154,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   pointer-events: none;
-  mix-blend-mode: difference;
   opacity: 0.15;
 }
 
@@ -165,6 +166,7 @@ body {
 @media (min-width: 1024px) {
   .vertical-spine {
     width: 64px;
+    mix-blend-mode: difference;
   }
 }
 

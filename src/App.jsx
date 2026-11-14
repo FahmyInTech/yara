@@ -34,9 +34,9 @@ export default function App() {
         </main>
         <Footer />
 
-        {/* Film grain texture — fixed overlay */}
+        {/* Film grain texture — fixed overlay (desktop only to protect mobile WebKit GPU) */}
         <svg
-          className="grain-overlay"
+          className="grain-overlay hidden lg:block"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -44,7 +44,7 @@ export default function App() {
             <feTurbulence
               type="fractalNoise"
               baseFrequency="0.65"
-              numOctaves="3"
+              numOctaves="2"
               stitchTiles="stitch"
             />
           </filter>
