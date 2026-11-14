@@ -39,20 +39,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mobile photo — full bleed banner after text */}
-        <div className="relative -mx-6 mt-10 aspect-[4/3] sm:aspect-[5/3] overflow-hidden lg:hidden">
+        {/* Mobile photo — portrait ratio matching the 3:4 source image */}
+        <div className="relative -mx-6 sm:mx-auto sm:max-w-md md:max-w-lg mt-8 aspect-[3/4] overflow-hidden lg:hidden">
           <div className="duotone h-full w-full">
             <img
               src={HERO_IMAGE_URL}
               alt="Yara Abdelaziz"
               decoding="async"
-              className="h-full w-full object-cover object-[center_15%]"
+              className="h-full w-full object-cover object-top"
             />
           </div>
           {/* Top fade */}
-          <div className="absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-ink to-transparent" />
+          <div className="absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-ink to-transparent" />
           {/* Bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-t from-ink to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 z-10 h-20 bg-gradient-to-t from-ink to-transparent" />
         </div>
       </div>
 
