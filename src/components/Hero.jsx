@@ -1,3 +1,5 @@
+const HERO_IMAGE_URL = 'https://res.cloudinary.com/dgqequjgk/image/upload/v1794690613/Hero_img_bfw9ux.png'
+
 export default function Hero() {
   return (
     <header className="relative overflow-hidden pt-28 pb-6 lg:h-screen lg:min-h-[650px] lg:pt-24 lg:pb-20 border-b border-ink-4 flex flex-col justify-between">
@@ -41,7 +43,7 @@ export default function Hero() {
         <div className="relative -mx-6 mt-10 aspect-[4/3] sm:aspect-[5/3] overflow-hidden lg:hidden">
           <div className="duotone h-full w-full">
             <img
-              src="/portrait.jpg"
+              src={HERO_IMAGE_URL}
               alt="Yara Abdelaziz"
               className="h-full w-full object-cover object-[center_15%]"
             />
@@ -57,7 +59,7 @@ export default function Hero() {
       <div className="absolute inset-y-0 right-0 hidden w-[45%] lg:block pointer-events-none">
         <div className="duotone h-full w-full">
           <img
-            src="/portrait.jpg"
+            src={HERO_IMAGE_URL}
             alt="Yara Abdelaziz"
             className="h-full w-full object-cover object-top"
           />
