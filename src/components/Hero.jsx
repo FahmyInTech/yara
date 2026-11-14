@@ -42,7 +42,7 @@ export default function Hero() {
         {/* Mobile photo — fits remaining viewport height without scrolling */}
         <div className="relative -mx-6 mt-4 flex-1 min-h-0 flex items-end justify-center overflow-hidden lg:hidden">
           <div className="relative h-full aspect-[1059/1485] max-w-full overflow-hidden">
-            <div className="duotone h-full w-full">
+            <div className="h-full w-full">
               <img
                 src={HERO_IMAGE_URL}
                 alt="Yara Abdelaziz"
@@ -63,7 +63,7 @@ export default function Hero() {
 
       {/* Desktop photo — bleeds to right viewport edge */}
       <div className="absolute inset-y-0 right-0 hidden w-[45%] lg:block pointer-events-none">
-        <div className="duotone h-full w-full">
+        <div className="h-full w-full">
           <img
             src={HERO_IMAGE_URL}
             alt="Yara Abdelaziz"
