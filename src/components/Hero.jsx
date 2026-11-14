@@ -2,7 +2,7 @@ const HERO_IMAGE_URL = 'https://res.cloudinary.com/dgqequjgk/image/upload/f_auto
 
 export default function Hero() {
   return (
-    <header className="relative overflow-hidden pt-28 pb-6 lg:h-screen lg:min-h-[650px] lg:pt-24 lg:pb-20 border-b border-ink-4 flex flex-col justify-between">
+    <header className="relative overflow-hidden h-screen supports-[height:100dvh]:h-dvh min-h-[580px] pt-16 pb-0 lg:h-screen lg:min-h-[650px] lg:pt-24 lg:pb-20 border-b border-ink-4 flex flex-col justify-between">
       
       {/* Bottom Metadata - Kept */}
       <div className="absolute inset-x-0 bottom-0 h-12 flex items-center justify-between px-6 lg:px-10 font-mono text-[9px] uppercase tracking-[0.2em] text-text-faint z-30 pointer-events-none">
@@ -11,48 +11,53 @@ export default function Hero() {
       </div>
 
       {/* Text content - Massive typography overlapping the photo */}
-      <div className="relative z-10 w-full px-6 lg:px-10 mt-12 flex-1 flex flex-col justify-center">
-        <div className="lg:w-[60%]">
+      <div className="relative z-10 w-full px-6 lg:px-10 mt-0 lg:mt-12 flex-1 min-h-0 flex flex-col justify-between lg:justify-center">
+        <div className="lg:w-[60%] shrink-0">
           {/* Slate tag */}
-          <div className="animate-entrance mb-8 lg:mb-10">
-            <span className="inline-block border border-ink-4 px-4 py-2 font-mono text-[10px] tracking-[0.18em] text-text-muted uppercase">
+          <div className="animate-entrance mb-3 sm:mb-4 lg:mb-10">
+            <span className="inline-block border border-ink-4 px-3 py-1.5 lg:px-4 lg:py-2 font-mono text-[9px] sm:text-[10px] tracking-[0.18em] text-text-muted uppercase">
               Subject: Film &amp; TV&ensp;—&ensp;Scene: Writer&ensp;—&ensp;Take: 01
             </span>
           </div>
 
           {/* Massive Name - Using sans-serif (font-body) for brutalist impact */}
-          <h1 className="animate-entrance-delay-1 font-body text-[clamp(3rem,12vw,6.5rem)] lg:text-[9.5vw] font-bold leading-[0.85] tracking-tighter text-text uppercase">
+          <h1 className="animate-entrance-delay-1 font-body text-[clamp(2.4rem,10.5vw,4.25rem)] lg:text-[9.5vw] font-bold leading-[0.85] tracking-tighter text-text uppercase">
             Yara
-            <span className="block mt-2 lg:mt-5 text-gold tracking-tight">Abdelaziz</span>
+            <span className="block mt-1.5 lg:mt-5 text-gold tracking-tight">Abdelaziz</span>
           </h1>
 
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6 mt-12 lg:mt-16">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-2.5 sm:gap-3 lg:gap-6 mt-4 sm:mt-5 lg:mt-16">
             {/* Gold accent rule */}
             <div
-              className="animate-entrance-delay-2 h-px w-12 bg-gold shrink-0"
+              className="animate-entrance-delay-2 h-px w-10 lg:w-12 bg-gold shrink-0"
               aria-hidden="true"
             />
             {/* Role line */}
-            <p className="animate-entrance-delay-2 font-mono text-[11px] sm:text-[13px] lg:text-[15px] font-medium tracking-[0.18em] lg:tracking-[0.2em] text-text-muted uppercase">
+            <p className="animate-entrance-delay-2 font-mono text-[10px] sm:text-[12px] lg:text-[15px] font-medium tracking-[0.16em] lg:tracking-[0.2em] text-text-muted uppercase">
               Multimedia Writer | Researcher | Visual Storyteller
             </p>
           </div>
         </div>
 
-        {/* Mobile photo — portrait ratio matching the 3:4 source image */}
-        <div className="relative -mx-6 sm:mx-auto sm:max-w-md md:max-w-lg mt-8 aspect-[3/4] overflow-hidden lg:hidden">
-          <div className="duotone h-full w-full">
-            <img
-              src={HERO_IMAGE_URL}
-              alt="Yara Abdelaziz"
-              decoding="async"
-              className="h-full w-full object-cover object-top"
-            />
+        {/* Mobile photo — fits remaining viewport height without scrolling */}
+        <div className="relative -mx-6 mt-4 flex-1 min-h-0 flex items-end justify-center overflow-hidden lg:hidden">
+          <div className="relative h-full aspect-[1059/1485] max-w-full overflow-hidden">
+            <div className="duotone h-full w-full">
+              <img
+                src={HERO_IMAGE_URL}
+                alt="Yara Abdelaziz"
+                decoding="async"
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+            {/* Edge fades */}
+            <div className="absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-ink to-transparent" />
+            <div className="absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-ink to-transparent" />
+            {/* Top fade */}
+            <div className="absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-ink to-transparent" />
+            {/* Bottom fade */}
+            <div className="absolute inset-x-0 bottom-0 z-10 h-20 bg-gradient-to-t from-ink to-transparent" />
           </div>
-          {/* Top fade */}
-          <div className="absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-ink to-transparent" />
-          {/* Bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 z-10 h-20 bg-gradient-to-t from-ink to-transparent" />
         </div>
       </div>
 
