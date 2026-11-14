@@ -28,7 +28,7 @@ export default function Writing() {
       link: DRIVE_ARCHIVE_URL,
     },
     {
-      title: 'Film Analysis: Ma’loul Celebrates Its Destruction',
+      title: 'News',
       category: 'Feature',
       date: '2026',
       desc: 'An investigation into the documentary traditions and cinematic languages that record daily life.',
